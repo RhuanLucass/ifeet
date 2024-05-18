@@ -48,7 +48,7 @@ if (isset($_POST['submit']) && ($_POST['senha'] === $_POST['senhaconfirmada'])) 
   <div
     class="d-flex flex-md-column align-items-center justify-content-center m-auto my-0 div-container position-relative">
     <header class="d-flex justify-content-center position-absolute top-0 py-4">
-      <img src="../assets/images/logo.png" alt="Logo do IFeet">
+      <img class="logo" src="../assets/images/logo.png" alt="Logo do IFeet">
     </header>
     <main class="d-flex w-100">
 
@@ -101,6 +101,7 @@ if (isset($_POST['submit']) && ($_POST['senha'] === $_POST['senhaconfirmada'])) 
     </main>
   </div>
   <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/validation.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -7,7 +14,12 @@ body {
 
 .div-container {
   width: 390px;
+  min-width: 300px;
   min-height: 844px;
+}
+
+.logo {
+  width: 180px;
 }
 
 .bg-yellow {
@@ -32,7 +44,14 @@ body {
   border: #fd741f !important;
 }
 
-*:focus {
+img,button, a{
+  -webkit-user-drag: none;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
   box-shadow: 0px 0px 10px 0px #fd741f !important;
   border: 1px solid #fd741f !important;
 }
@@ -42,12 +61,44 @@ body {
   border-color: #fd741f;
 }
 
-h1{
+h1 {
   font-size: 30px !important;
 }
 
-a{
+a {
   text-decoration: none !important;
+  padding: 8px 16px;
+}
+
+button{
+  padding: 0 !important;
+}
+
+.confirm-pass {
+  border-color: var(--bs-form-invalid-border-color) !important;
+  padding-right: calc(1.5em + .75rem) !important;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/></svg>") !important;
+  background-repeat: no-repeat;
+  background-position: right calc(.375em + .1875rem) center;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+i {
+  width: 20px;
+  height: 16px;
+}
+
+.input-pass {
+  flex: 1 0 85%;
+}
+
+.input-icon {
+  flex: 1 0;
+  cursor: pointer;
+}
+
+.input-feedback {
+  flex: 1 0 100%;
 }
 
 .cards-container {
@@ -58,35 +109,49 @@ a{
 
 .cards-container .card {
   width: 100%;
-  height: 35rem;
+  height: 100%;
   position: absolute;
   transition: transform 0s ease, opacity 0s ease;
+  border-radius: 6px;
+}
+
+.card .img-container{
+  position: relative;
+  height: 35rem;
 }
 
 .cards-container .card img {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  position: absolute;
+  border-radius: 6px;
+
 }
 
 .cards-container .card-body{
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7567401960784313) 37%, rgba(0,0,0,0.40940126050420167) 68%, rgba(0,0,0,0) 100%);
-  height: 10rem;
+  height: 13rem;
   position: absolute;
   bottom: 0;
   display: flex;
   align-self: center;
   justify-content: flex-end;
   flex-direction: column;
+  color: white;
+  border-radius: 6px;
 }
 
-.cards-container .card-body .card-title{
+.card-body .title-container{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
   width: 100%;
-  color: white;
+  gap: 1rem;
 }
 
-.cards-container .card-body .card-text{
-  width: 100%;
-  color: white;
+.title-container .card-title,
+.title-container .card-size{
+  margin: 0;
 }

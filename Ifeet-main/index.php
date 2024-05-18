@@ -25,7 +25,7 @@
   <div
     class="d-flex flex-md-column align-items-center justify-content-center m-auto my-0 div-container position-relative">
     <header class="d-flex justify-content-center position-absolute top-0 py-4">
-      <img src="assets/images/logo.png" alt="Logo do IFeet">
+      <img class="logo" src="assets/images/logo.png" alt="Logo do IFeet">
     </header>
     <main class="d-flex w-100">
       <div class="d-grid gap-3 mx-4 w-100">

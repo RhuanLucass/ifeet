@@ -25,29 +25,36 @@
   <div
     class="d-flex flex-md-column align-items-center justify-content-center m-auto my-0 div-container position-relative">
     <header class="d-flex justify-content-center position-absolute top-0 py-4">
-      <img src="../assets/images/logo.png" alt="Logo do IFeet">
+      <img class="logo" src="../assets/images/logo.png" alt="Logo do IFeet">
     </header>
     <main class="d-flex w-100 main">
       <section class="cards-container d-flex align-content-center justify-content-center w-100">
         <div class="card w-100">
-          <img
-            src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-12-06-at-20-56-00-f980b8c085848c621a17021270152750-1024-1024.jpeg"
-            class="card-img-top" draggable="false">
-          <div class="card-body">
-            <h2 class="card-title">Nike Air</h2>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-          </div>
-        </div>
+          <div class="img-container">
+            <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-55-42-a9258a74b5ddd854f617021274585169-1024-1024.webp"
+              class="card-img-top" draggable="false">
 
-        <div class="card w-100">
-          <img
-            src="https://photos.enjoei.com.br/tenis-camuflado-83758448/800x800/czM6Ly9waG90b3MuZW5qb2VpLmNvbS5ici9wcm9kdWN0cy8zMDUyOTg2MC9mMGE3OWI5YWMxY2RlOTAyMDQwNDJkNjNlZDg3YzBmZC5qcGc"
-            class="card-img-top" draggable="false">
+            <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-55-42-1-4bf6d2f92c1cca831717021274610464-1024-1024.webp"
+              class="card-img-top" draggable="false">
+
+              <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-52-40-89e270021f5cfb341817021274651771-1024-1024.webp"
+              class="card-img-top" draggable="false">
+
+              <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-55-42-2-98f0fe9632c25962fd17021274597848-1024-1024.webp"
+              class="card-img-top" draggable="false">
+
+          </div>
           <div class="card-body">
-            <h2 class="card-title">Nike Air</h2>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+            <div class="title-container">
+              <h2 class="card-title">Nike Air, </h2>
+              <h3 class="card-size">39</h3>
+            </div>
+            <h5 class="card-condition">Seminovo</h5>
+            <p class="card-text">Tênis comprado a duas semanas. Motivo da troca: não uso mais.</p>
           </div>
         </div>
       </section>
