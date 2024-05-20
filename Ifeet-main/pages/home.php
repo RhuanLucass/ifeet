@@ -30,10 +30,15 @@
     <main class="d-flex w-100 main">
       <section class="cards-container d-flex align-content-center justify-content-center w-100">
         <div class="card w-100">
-          <div class="img-container">
+          <div class="card-actions">
+            <div class="prev-img"></div>
+            <div class="next-img"></div>
+          </div>
+          <div class="card-img-container">
+            <div class="bullets"></div>
             <img
               src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-55-42-a9258a74b5ddd854f617021274585169-1024-1024.webp"
-              class="card-img-top" draggable="false">
+              class="card-img-top img-active" draggable="false">
 
             <img
               src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-55-42-1-4bf6d2f92c1cca831717021274610464-1024-1024.webp"
