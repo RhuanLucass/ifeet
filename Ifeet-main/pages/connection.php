@@ -2,10 +2,10 @@
 $hostname = "localhost";
 $bancodedados = "ifeet";
 $usuario = "root";
-$senha = "";
+$password = "";
 
 // Criando conexao
-$conexao = mysqli_connect($hostname, $usuario, $senha, $bancodedados);
+$conexao = mysqli_connect($hostname, $usuario, $password, $bancodedados);
 
 // Checagem de conexao
 

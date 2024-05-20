@@ -1,4 +1,4 @@
-function showPassword() {
+const showPassword = () => {
   const password = document.getElementById("password");
   const confirmPassword = document.getElementById("confirm-password");
   const show_eye = document.querySelectorAll("#show_eye");

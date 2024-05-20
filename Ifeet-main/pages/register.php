@@ -1,25 +1,22 @@
 <?php
 
 //conexao
-include_once('conexao.php');
+include_once ('connection.php');
 
 
 
-if (isset($_POST['submit']) && ($_POST['senha'] === $_POST['senhaconfirmada'])) {
+if (isset($_POST['submit']) && ($_POST['password'] === $_POST['confirm-password'])) {
 
   //salvando os dados em variaveis 
   $email = $_POST['email'];
-  $senha = $_POST['senha'];
-  $nome = $_POST['nome'];
-  $sobrenome = $_POST['sobrenome'];
-  $senhaconfirmada = $_POST['senhaconfirmada'];
+  $password = $_POST['password'];
+  $name = $_POST['name'];
+  $surname = $_POST['surname'];
+  $confirmPassword = $_POST['confirm-password'];
   //enviando para o BD
-  $resultado = mysqli_query($conexao, "INSERT INTO usuarios(email,senha,nome,sobrenome) VALUES ('$email','$senha','$nome','$sobrenome')");
-  header('Location: telainicial.php');
+  $resultado = mysqli_query($conexao, "INSERT INTO usuarios(email,senha,nome,sobrenome) VALUES ('$email','$password','$name','$surname')");
+  header('Location: home.php');
 }
-
-
-
 
 ?>
 
@@ -57,7 +54,7 @@ if (isset($_POST['submit']) && ($_POST['senha'] === $_POST['senhaconfirmada'])) 
     </header>
     <main class="d-flex w-100">
 
-      <form  class="form-signin w-100 px-4 m-auto needs-validation" novalidate>
+      <form method="post" class="form-signin w-100 px-4 m-auto needs-validation" novalidate>
         <h1 class="mb-5 fw-normal text-center">Registrar</h1>
         <div class="col-md-6 d-flex w-100 gap-3 my-3">
           <div class="form-floating">
@@ -83,44 +80,45 @@ if (isset($_POST['submit']) && ($_POST['senha'] === $_POST['senhaconfirmada'])) 
           </div>
         </div>
 
-          <div class="input-group my-3">
-            <div class="form-floating d-flex flex-wrap">
-              <input type="password" class="form-control input-pass" name="password" id="password" placeholder="Senha" required>
-              <label for="password">Senha</label>
+        <div class="input-group my-3">
+          <div class="form-floating d-flex flex-wrap">
+            <input type="password" class="form-control input-pass" name="password" id="password" placeholder="Senha"
+              required>
+            <label for="password">Senha</label>
 
-              <div class="input-group input-icon">
-                <span class="input-group-text" onclick="showPassword()">
-                  <i class="fas fa-eye" id="show_eye"></i>
-                  <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
-                </span>
-              </div>
+            <div class="input-group input-icon">
+              <span class="input-group-text" onclick="showPassword()">
+                <i class="fas fa-eye" id="show_eye"></i>
+                <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
+              </span>
+            </div>
 
-              <div id="passw" class="invalid-feedback input-feedback">
-                Confirme sua senha!
-              </div>
+            <div id="passw" class="invalid-feedback input-feedback">
+              Confirme sua senha!
             </div>
           </div>
-          
-          <div class="input-group my-3">
-            <div class="form-floating d-flex flex-wrap">
-              <input type="password" class="form-control input-pass" name="confirm-password" id="confirm-password"
-                placeholder="Confirmar senha" required>
-              <label for="confirm-password">Confirmar senha</label>
+        </div>
 
-              <div class="input-group input-icon">
-                <span class="input-group-text" onclick="showPassword()">
-                  <i class="fas fa-eye" id="show_eye"></i>
-                  <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
-                </span>
-              </div>
+        <div class="input-group my-3">
+          <div class="form-floating d-flex flex-wrap">
+            <input type="password" class="form-control input-pass" name="confirm-password" id="confirm-password"
+              placeholder="Confirmar senha" required>
+            <label for="confirm-password">Confirmar senha</label>
 
-              <div id="confirm" class="invalid-feedback input-feedback">
-                Confirme sua senha!
-              </div>
+            <div class="input-group input-icon">
+              <span class="input-group-text" onclick="showPassword()">
+                <i class="fas fa-eye" id="show_eye"></i>
+                <i class="fas fa-eye-slash d-none" id="hide_eye"></i>
+              </span>
+            </div>
+
+            <div id="confirm" class="invalid-feedback input-feedback">
+              Confirme sua senha!
             </div>
           </div>
+        </div>
 
-          <button class="btn btn-primary w-100 py-2" type="submit" name="submit">Registrar</button>
+        <button class="btn btn-primary w-100 py-2" type="submit" name="submit">Registrar</button>
       </form>
     </main>
   </div>
