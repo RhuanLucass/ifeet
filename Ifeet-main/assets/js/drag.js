@@ -1,7 +1,9 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   var cards = document.querySelectorAll('.card');
   var moveOutWidth = document.body.clientWidth * 1.5;
   var moveOutHeight = document.body.clientHeight * 1.5;
+
+  var isPanning = false; // Defina a variável aqui, no escopo correto
 
   cards.forEach(function (card) {
     var hammertime = new Hammer(card);
@@ -21,6 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
       card.classList.add('moving');
       // Maintain top: 50% by setting transform origin to center
       card.style.transform = `translate(${deltaX}px, ${deltaY}px) rotate(${rotate}deg)`;
+
+      isPanning = true; // Atualize a variável ao detectar um pan
     });
 
     hammertime.on('panend', function (event) {
@@ -32,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Define a larger threshold for vertical movement detection
       var verticalThreshold = 150;
-      var horizontalThreshold = 200;
+      var horizontalThreshold = 100;
 
       var keep = absDeltaX < horizontalThreshold && absDeltaY < verticalThreshold;
 
@@ -63,6 +67,66 @@ document.addEventListener('DOMContentLoaded', function () {
           card.remove();
         });
       }
+
+      setTimeout(() => { isPanning = false; }, 0); // Reset a variável após o pan end
     });
   });
+
+  // Função para trocar as imagens do card
+  const swapCardImage = () => {
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach((card) => {
+      const imgs = card.querySelectorAll('.card-img-container img');
+      const prevImg = card.querySelector('.card-actions .prev-img');
+      const nextImg = card.querySelector('.card-actions .next-img');
+      const bulletsContainer = card.querySelector('.bullets');
+      
+      // Adicionando as bullets referente ao numero de imagens dinamicamente
+      imgs.forEach((img, index) => {
+        const newBullet = document.createElement('span');
+        newBullet.classList.add('bullet');
+  
+        if (index === 0) {
+          newBullet.classList.add('bullet-active');
+        }
+  
+        bulletsContainer.appendChild(newBullet);
+      });
+  
+      const bullets = bulletsContainer.querySelectorAll('.bullet');
+  
+      prevImg.addEventListener('click', (e) => {
+        if (isPanning) return; // Evite a troca de imagem se o pan estiver ativo
+  
+        const bulletActive = Array.from(bullets).findIndex(bullet => bullet.classList.contains('bullet-active'));
+        const imgActive = Array.from(imgs).findIndex(img => img.classList.contains('img-active'));
+  
+        if (bulletActive > 0) {
+          bullets[bulletActive].classList.remove('bullet-active');
+          bullets[bulletActive - 1].classList.add('bullet-active');
+  
+          imgs[imgActive].classList.remove('img-active');
+          imgs[imgActive - 1].classList.add('img-active');
+        }
+      });
+  
+      nextImg.addEventListener('click', (e) => {
+        if (isPanning) return; // Evite a troca de imagem se o pan estiver ativo
+  
+        const bulletActive = Array.from(bullets).findIndex(bullet => bullet.classList.contains('bullet-active'));
+        const imgActive = Array.from(imgs).findIndex(img => img.classList.contains('img-active'));
+  
+        if (bulletActive < bullets.length - 1) {
+          bullets[bulletActive].classList.remove('bullet-active');
+          bullets[bulletActive + 1].classList.add('bullet-active');
+  
+          imgs[imgActive].classList.remove('img-active');
+          imgs[imgActive + 1].classList.add('img-active');
+        }
+      });
+    })
+  }
+  swapCardImage();
+
 });

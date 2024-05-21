@@ -1,10 +1,10 @@
 <?php
 
-if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])) {
-    include_once ('conexao.php');
+if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['password'])) {
+    include_once ('connection.php');
 
     $email = $_POST['email'];
-    $password = $_POST['senha'];
+    $password = $_POST['password'];
 
     $sql = "SELECT * FROM usuarios WHERE email = '$email' and senha = '$password'";
     $result = $conexao->query($sql);
@@ -14,7 +14,7 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha']
         header('Location: login.php');
     } else {
         //Existe
-        header('Location: telainicial.php');
+        header('Location: home.php');
     }
 
 } else {

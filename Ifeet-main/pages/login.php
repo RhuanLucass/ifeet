@@ -1,7 +1,7 @@
 <?php
 
 //conexao
-include_once ('conexao.php');
+include_once ('connection.php');
 
 
 
@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
 
   //salvando os dados em variaveis  
   $email = $_POST["email"];
-  $password = $_POST["senha"];
+  $password = $_POST["password"];
   //enviando para o BD
   $resultado = mysqli_query($conexao, "INSERT INTO usuarios(email,senha) VALUES ('$email','$password')");
 }
@@ -65,7 +65,7 @@ if (isset($_POST['submit'])) {
           </div>
         </div>
         <div class="form-floating my-3">
-          <input name="senha" type="password" class="form-control" id="floatingPassword" placeholder="Senha" required>
+          <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Senha" required>
           <label for="floatingPassword">Senha</label>
           <div class="invalid-feedback">
             Informe sua senha!
