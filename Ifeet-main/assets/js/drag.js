@@ -74,8 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Função para trocar as imagens do card
   const swapCardImage = () => {
-    const cards = document.querySelectorAll('.card');
-    
     cards.forEach((card) => {
       const imgs = card.querySelectorAll('.card-img-container img');
       const prevImg = card.querySelector('.card-actions .prev-img');

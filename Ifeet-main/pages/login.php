@@ -47,11 +47,11 @@ if (isset($_POST['submit'])) {
 
 <body class="d-flex bg-light">
   <div
-    class="d-flex flex-md-column align-items-center justify-content-center m-auto my-0 div-container position-relative">
-    <header class="d-flex justify-content-center position-absolute top-0 py-4">
+    class="d-flex flex-column align-items-center justify-content-start m-auto my-0 div-container position-relative ">
+    <header class="d-flex justify-content-center py-4">
       <img class="logo" src="../assets/images/logo.png" alt="Logo do IFeet">
     </header>
-    <main class="d-flex w-100">
+    <main class="d-flex w-100 h-100">
       <form action="testalogin.php" method="post" class="form-signin w-100 px-4 m-auto needs-validation" novalidate>
 
         <h1 class="mb-5 fw-normal text-center">Entrar</h1>

@@ -23,7 +23,7 @@
 
 <body class="d-flex bg-light">
   <div
-    class="d-flex flex-md-column align-items-center justify-content-center m-auto my-0 div-container position-relative">
+    class="d-flex flex-column align-items-center justify-content-center m-auto my-0 div-container position-relative">
     <header class="d-flex justify-content-center position-absolute top-0 py-4">
       <img class="logo" src="assets/images/logo.png" alt="Logo do IFeet">
     </header>

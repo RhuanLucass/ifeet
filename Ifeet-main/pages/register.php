@@ -34,8 +34,7 @@ if (isset($_POST['submit']) && ($_POST['password'] === $_POST['confirm-password'
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <!-- font awesome  -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/dc951fd168.js" crossorigin="anonymous"></script>
 
   <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -47,13 +46,11 @@ if (isset($_POST['submit']) && ($_POST['password'] === $_POST['confirm-password'
 </head>
 
 <body class="d-flex bg-light">
-  <div
-    class="d-flex flex-md-column align-items-center justify-content-center m-auto my-0 div-container position-relative">
-    <header class="d-flex justify-content-center position-absolute top-0 py-4">
+  <div class="d-flex flex-column align-items-center justify-content-start m-auto my-0 div-container position-relative ">
+    <header class="d-flex justify-content-center py-4">
       <img class="logo" src="../assets/images/logo.png" alt="Logo do IFeet">
     </header>
-    <main class="d-flex w-100">
-
+    <main class="d-flex w-100 h-100">
       <form method="post" class="form-signin w-100 px-4 m-auto needs-validation" novalidate>
         <h1 class="mb-5 fw-normal text-center">Registrar</h1>
         <div class="col-md-6 d-flex w-100 gap-3 my-3">
@@ -124,6 +121,7 @@ if (isset($_POST['submit']) && ($_POST['password'] === $_POST['confirm-password'
   </div>
   <script src="../assets/js/scripts.js"></script>
   <script src="../assets/js/validation.js"></script>
+  
 </body>
 
 </html>
