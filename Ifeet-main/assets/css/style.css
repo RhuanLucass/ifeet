@@ -14,7 +14,8 @@ body {
 .div-container {
   width: 390px;
   min-width: 300px;
-  height: 100vh;
+  max-height: 100vh;
+  /* overflow: hidden; */
 }
 
 .logo {
@@ -123,6 +124,8 @@ header i.fa-message:hover {
 #cards-container {
   height: 100%;
   max-height: 32rem;
+  min-height: 25rem;
+  overflowY: hidden;
 }
 
 #cards-container .card {
@@ -186,6 +189,10 @@ header i.fa-message:hover {
   transition: .2s ease-in-out;
 }
 
+#buttons-actions > div:hover{
+  filter: brightness(1.2);
+}
+
 #buttons-actions #button-superlike{
   background-color: #c9a40f;
   width: 70px;
@@ -203,16 +210,12 @@ header i.fa-message:hover {
   font-size: 50px;
 }
 
-#buttons-actions #button-superlike:hover{
-  background-color: #f8ce25;
+@media screen and (max-width: 768px){
+  #buttons-actions > div:hover{
+    filter: none;
+  }
+
+  #buttons-actions > div:active{
+    filter: brightness(1.2);
+  }
 }
-
-#buttons-actions #button-like:hover{
-  background-color: #fd741f;
-}
-
-#buttons-actions #button-dislike:hover{
-  background-color: #ff1e1e;
-
-}
-

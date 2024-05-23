@@ -73,7 +73,81 @@
           </div>
         </div>
 
-        <div class="card card-next z-3 w-100 h-100 position-absolute rounded-2">
+        <div class="card card-next z-2 w-100 h-100 position-absolute rounded-2">
+          <div class="card-actions z-1 w-100 h-100 d-flex align-items-center justify-content-center position-absolute">
+            <div class="prev-img w-50 h-100"></div>
+            <div class="next-img w-50 h-100"></div>
+          </div>
+          <div class="card-img-container position-relative">
+            <div
+              class="bullets z-1 d-flex align-content-center justify-content-center w-100 gap-3 position-absolute p-2">
+            </div>
+            <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-55-42-a9258a74b5ddd854f617021274585169-1024-1024.webp"
+              class="card-img-top img-active" draggable="false">
+
+            <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-55-42-1-4bf6d2f92c1cca831717021274610464-1024-1024.webp"
+              class="card-img-top" draggable="false">
+
+            <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-52-40-89e270021f5cfb341817021274651771-1024-1024.webp"
+              class="card-img-top" draggable="false">
+
+            <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-55-42-2-98f0fe9632c25962fd17021274597848-1024-1024.webp"
+              class="card-img-top" draggable="false">
+
+          </div>
+          <div
+            class="card-body position-absolute bottom-0 z-1 d-flex align-self-center justify-content-end flex-column rounded-2">
+            <div class="title-container d-flex align-items-end justify-content-start w-100 gap-3">
+              <h2 class="card-title m-0">Nike Air, </h2>
+              <h3 class="card-size m-0">39</h3>
+            </div>
+            <h5 class="card-condition">Seminovo</h5>
+            <p class="card-text">Tênis comprado a duas semanas. Motivo da troca: não uso mais.</p>
+          </div>
+        </div>
+
+        <div class="card card-next z-1 w-100 h-100 position-absolute rounded-2">
+          <div class="card-actions z-1 w-100 h-100 d-flex align-items-center justify-content-center position-absolute">
+            <div class="prev-img w-50 h-100"></div>
+            <div class="next-img w-50 h-100"></div>
+          </div>
+          <div class="card-img-container position-relative">
+            <div
+              class="bullets z-1 d-flex align-content-center justify-content-center w-100 gap-3 position-absolute p-2">
+            </div>
+            <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-55-42-a9258a74b5ddd854f617021274585169-1024-1024.webp"
+              class="card-img-top img-active" draggable="false">
+
+            <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-55-42-1-4bf6d2f92c1cca831717021274610464-1024-1024.webp"
+              class="card-img-top" draggable="false">
+
+            <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-52-40-89e270021f5cfb341817021274651771-1024-1024.webp"
+              class="card-img-top" draggable="false">
+
+            <img
+              src="https://acdn.mitiendanube.com/stores/001/326/998/products/whatsapp-image-2023-11-24-at-08-55-42-2-98f0fe9632c25962fd17021274597848-1024-1024.webp"
+              class="card-img-top" draggable="false">
+
+          </div>
+          <div
+            class="card-body position-absolute bottom-0 z-1 d-flex align-self-center justify-content-end flex-column rounded-2">
+            <div class="title-container d-flex align-items-end justify-content-start w-100 gap-3">
+              <h2 class="card-title m-0">Nike Air, </h2>
+              <h3 class="card-size m-0">39</h3>
+            </div>
+            <h5 class="card-condition">Seminovo</h5>
+            <p class="card-text">Tênis comprado a duas semanas. Motivo da troca: não uso mais.</p>
+          </div>
+        </div>
+
+        <div class="card card-next z-0 w-100 h-100 position-absolute rounded-2">
           <div class="card-actions z-1 w-100 h-100 d-flex align-items-center justify-content-center position-absolute">
             <div class="prev-img w-50 h-100"></div>
             <div class="next-img w-50 h-100"></div>
