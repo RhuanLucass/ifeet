@@ -1,7 +1,7 @@
 <?php
 
 //conexao
-include_once ('connection.php');
+include_once '../assets/php/connection.php';
 
 
 
@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
       <img class="logo" src="../assets/images/logo.png" alt="Logo do IFeet">
     </header>
     <main class="d-flex w-100 h-100">
-      <form action="testalogin.php" method="post" class="form-signin w-100 px-4 m-auto needs-validation" novalidate>
+      <form action="../assets/php/testalogin.php" method="post" class="form-signin w-100 px-4 m-auto needs-validation" novalidate>
 
         <h1 class="mb-5 fw-normal text-center">Entrar</h1>
 

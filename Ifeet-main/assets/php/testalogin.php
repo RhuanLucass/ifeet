@@ -11,10 +11,10 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['passwor
 
     if (mysqli_num_rows($result) < 1) {
         //Nao existe
-        header('Location: login.php');
+        header('Location: ../../pages/login.php');
     } else {
         //Existe
-        header('Location: home.php');
+        header('Location: ../../pages/home.php');
     }
 
 } else {

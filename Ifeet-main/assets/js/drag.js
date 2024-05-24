@@ -9,6 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // Definindo variável para rastrear se o gesto de pan (movimentar elemento na tela) está ocorrendo
   var isPanning = false;
 
+  // Função para atualizar a altura da janela
+  const updateHeight = () => {
+    var windowHeight = window.innerHeight;
+    document.body.style.height = `${windowHeight}px`;
+  }
+
+  // Evento para atualizar a altura quando a janela for redimensionada
+  window.addEventListener('resize', updateHeight);
+
+
+  
+
   // Função para desativar ou ativar os eventos de clique nos botões de ação
   const toggleButtonsPointerEvents = (enabled) => {
     const actionButtons = document.querySelectorAll('#buttons-actions > div');

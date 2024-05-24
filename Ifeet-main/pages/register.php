@@ -1,7 +1,7 @@
 <?php
 
 //conexao
-include_once ('connection.php');
+include_once ('../assets/php/connection.php');
 
 
 
